@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "devDependencies": {
+    "husky": "^1.0.0-rc.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "sbt -Dfile.encoding=UTF8 prepare && git add --all",
+      "pre-push": "sbt -Dfile.encoding=UTF8 check"
+    }
+  }
+}

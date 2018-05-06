@@ -1,0 +1,6 @@
+alias format=;scalafmt;test:scalafmt;sbt:scalafmt
+alias style=;scalastyle;test:scalastyle
+alias formatted=;scalafmt::test;test:scalafmt::test;sbt:scalafmt::test
+alias cover=;coverage;test;coverageReport
+alias prepare=;format;style
+alias check=;style;formatted;cover

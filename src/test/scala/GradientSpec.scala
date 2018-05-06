@@ -6,7 +6,7 @@ class GradientSpec extends FlatSpec with Matchers {
     val x: Dynamic = 5
     val y: Int = x
 
-    5 should be (y)
+    5 should be(y)
   }
 
   it should "throw ClassCastException on invalid coercions" in {
@@ -17,5 +17,3 @@ class GradientSpec extends FlatSpec with Matchers {
     }
   }
 }
-
-// end
