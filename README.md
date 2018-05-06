@@ -3,6 +3,10 @@ Gradient
 
 Gradual Typing encoding for Scala.
 
+[![Build Status](https://travis-ci.org/marcoonroad/gradient.svg?branch=master)](https://travis-ci.org/marcoonroad/gradient)
+[![codecov](https://codecov.io/gh/marcoonroad/gradient/branch/master/graph/badge.svg)](https://codecov.io/gh/marcoonroad/gradient)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/31f97abbe66d4f60959b43fd185d35a7)](https://www.codacy.com/app/marcoonroad/gradient?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marcoonroad/gradient&amp;utm_campaign=Badge_Grade)
+
 This project provides a `Dynamic` "opaque" type with the following implicit
 coercions (inside the `Gradient` namespace):
 - `upcast:   [Type](value: Type)    Dynamic`
