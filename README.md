@@ -14,11 +14,11 @@ to such `Dynamic` type:
 ```scala
 import Gradient._
 
-val x : Dynamic = "Hello, World!"
+val x: Dynamic = "Hello, World!"
 
 // ... some stuff could be done here ...
 
-val y : String = x
+val y: String = x
 ```
 
 ### Rationale
@@ -32,18 +32,18 @@ example:
 ```scala
 import scala.language.implicitConversions
 
-implicit def cast[ Type ] (implicit value : Any) : Type =
+implicit def cast[ Type ] (value : Any) : Type =
   value.asInstanceOf[ Type ]
 
-val b : Any = 7 // OK, Int <: Any
+val b: Any = 7 // OK, Int <: Any
 
-val c : Int = b // OK, implicit cast : Any => Type where Type := Int
-
-// throws ClassCastException
-val d : String = b // OK, implicit cast : Any => Type where Type := String
+val c: Int = b // OK, implicit cast : Any => Type where Type := Int
 
 // throws ClassCastException
-val e : String = c // NOT OK, implicit cast : (Int <: Any) => Type where
+val d: String = b // OK, implicit cast : Any => Type where Type := String
+
+// throws ClassCastException
+val e: String = c // NOT OK, implicit cast : (Int <: Any) => Type where
 // Type := String, so Int => String
 ```
 

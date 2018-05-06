@@ -9,3 +9,13 @@ lazy val root = (project in file(".")).
 
 libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.5"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
+
+scalastyleFailOnError   := true
+scalastyleFailOnWarning := true
+
+(scalastyleFailOnError   in Test) := true
+(scalastyleFailOnWarning in Test) := true
+
+coverageEnabled       := true
+coverageMinimum       := 80
+coverageFailOnMinimum := true

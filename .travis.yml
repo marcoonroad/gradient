@@ -23,7 +23,10 @@ before_cache:
   - find $HOME/.sbt        -name "*.lock"               -print -delete
 
 script:
-  - sbt ++$TRAVIS_SCALA_VERSION -Dfile.encoding=UTF8 test
+  - sbt ++$TRAVIS_SCALA_VERSION -Dfile.encoding=UTF8 clean scalastyle test:scalastyle coverage test coverageReport
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email:
